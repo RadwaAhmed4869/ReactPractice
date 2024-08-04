@@ -1,6 +1,7 @@
-import Header from "./Components/Header"
-import CoreConcept from "./Components/CoreConcept"
+import Header from "./Components/Header";
+import CoreConcept from "./Components/CoreConcept";
 import TabButton from "./Components/TabButton";
+import Card from "./Components/Card";
 
 import { CORE_CONCEPTS } from "./data";
 
@@ -32,6 +33,28 @@ function App() {
           </menu>
         </section>
       </main>
+      <div id="app" class="card">
+        <h1>Available Experts</h1>
+        <Card name="Anthony Blake">
+          <p>
+            Blake is a professor of Computer Science at the University of
+            Illinois.
+          </p>
+          <p>
+            <a href="mailto:blake@example.com">Email Anthony</a>
+          </p>
+        </Card>
+
+        <Card name="Maria Miles">
+          <p>
+            Maria is a professor of Computer Science at the University of
+            Illinois.
+          </p>
+          <p>
+            <a href="mailto:blake@example.com">Email Maria</a>
+          </p>
+        </Card>
+      </div>
     </div>
   );
 }
