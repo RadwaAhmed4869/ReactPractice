@@ -1,5 +1,6 @@
-import Header from "./Compoents/Header"
-import CoreConcept from "./Compoents/CoreConcept"
+import Header from "./Components/Header"
+import CoreConcept from "./Components/CoreConcept"
+import TabButton from "./Components/TabButton";
 
 import { CORE_CONCEPTS } from "./data";
 
@@ -20,6 +21,15 @@ function App() {
               description={CORE_CONCEPTS[3].description}
             />
           </ul>
+        </section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            <TabButton>Components</TabButton>
+            <TabButton>JSX</TabButton>
+            <TabButton>Props</TabButton>
+            <TabButton>State</TabButton>
+          </menu>
         </section>
       </main>
     </div>
