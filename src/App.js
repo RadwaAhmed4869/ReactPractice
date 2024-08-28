@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "./Components/Header";
 import CoreConcept from "./Components/CoreConcept";
 import TabButton from "./Components/TabButton";
@@ -5,8 +6,11 @@ import TabButton from "./Components/TabButton";
 import { CORE_CONCEPTS } from "./data";
 
 function App() {
+  const [selectedTopic, setSelectedTopic] = useState("Please press a button");
+
   function handleSelect(selectedButton) {
-    console.log(selectedButton);
+    setSelectedTopic(selectedButton);
+    console.log(selectedTopic);
   }
 
   return (
@@ -36,6 +40,7 @@ function App() {
             <TabButton onSelect={() => handleSelect("Props")}>Props</TabButton>
             <TabButton onSelect={() => handleSelect("State")}>State</TabButton>
           </menu>
+          {selectedTopic}
         </section>
       </main>
     </div>
